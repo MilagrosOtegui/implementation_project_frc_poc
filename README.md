@@ -27,15 +27,3 @@ This writes:
 - classification_metrics_80_10_10.csv, regression_metrics_80_10_10.csv
 - confusion_matrix.png, regression_scatter.png, ci_reliability.png
 
-Optional: Hyperparameter grid (small)
-```
-python implementation.py --data-dir dataset/data --out-dir . --run-grid
-```
-This additionally writes:
-- classification_grid_results.csv, classification_best_model_metrics.csv
-- regression_grid_results.csv, regression_best_model_metrics.csv
-
-Notes
-- The script defaults to MLP hyperparameters found good in our runs (classification hidden=(64,32), lr=1e-3, dropout=0.2, pos_weight_scale=1.5; regression hidden=(64,64,32), lr=1e-3, dropout=0.0).
-- See the paper for more details on ensembles and calibration; this script stays compact and single-model by design.
-
